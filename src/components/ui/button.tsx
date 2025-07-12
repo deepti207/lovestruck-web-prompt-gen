@@ -20,6 +20,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         "romantic-lavender": "btn-romantic-lavender rounded-full text-lg font-semibold px-8 py-4",
         "romantic-blue": "btn-romantic-blue rounded-full text-lg font-semibold px-8 py-4",
+        "romantic-purple": "bg-accent text-accent-foreground hover:bg-accent/90 transform hover:scale-105 transition-all duration-300 shadow-[var(--shadow-romantic)] rounded-full text-lg font-semibold px-8 py-4",
+        "romantic-gray": "bg-muted text-muted-foreground hover:bg-muted/80 transform hover:scale-105 transition-all duration-300 shadow-[var(--shadow-soft)] rounded-full text-lg font-semibold px-8 py-4",
       },
       size: {
         default: "h-10 px-4 py-2",

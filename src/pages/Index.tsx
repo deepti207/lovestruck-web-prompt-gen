@@ -44,61 +44,87 @@ const Index = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Header Section */}
           <div className="fade-in-up mb-8" style={{animationDelay: '0.2s'}}>
-            <h1 className="text-romantic-title mb-4">
+            <h1 className="text-romantic-title mb-6">
               For Unnati 💖
             </h1>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Unnati, will you be mine?
+            </h2>
             <p className="text-romantic-subtitle mb-2">
-              Since the day you said you liked me, my world has changed.
+              Since the day you said you liked me, everything has felt magical.
             </p>
             <p className="text-romantic-subtitle">
-              And now, I want to ask you something special...
+              And now… it's my turn to ask.
             </p>
-          </div>
-
-          {/* Main Question */}
-          <div className="fade-in-up mb-12" style={{animationDelay: '0.6s'}}>
-            <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-8">
-              Will you be mine?
-            </h2>
           </div>
 
           {/* Buttons */}
-          <div className="fade-in-up flex flex-col sm:flex-row gap-6 justify-center items-center mb-12" style={{animationDelay: '1s'}}>
-            <Button
-              variant="romantic-lavender"
-              size="xl"
-              onClick={() => handleButtonClick("Yes 💜")}
-              disabled={selectedButton !== null}
-              className="min-w-48"
-            >
-              Yes 💜
-            </Button>
-            
-            <Button
-              variant="romantic-blue"
-              size="xl"
-              onClick={() => handleButtonClick("Of course 💙")}
-              disabled={selectedButton !== null}
-              className="min-w-48"
-            >
-              Of course 💙
-            </Button>
+          <div className="fade-in-up mb-12" style={{animationDelay: '0.8s'}}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
+              <Button
+                variant="romantic-lavender"
+                size="xl"
+                onClick={() => handleButtonClick("Yes 💜")}
+                disabled={selectedButton !== null}
+                className="w-full"
+              >
+                Yes 💜
+              </Button>
+              
+              <Button
+                variant="romantic-blue"
+                size="xl"
+                onClick={() => handleButtonClick("Of Course 💙")}
+                disabled={selectedButton !== null}
+                className="w-full"
+              >
+                Of Course 💙
+              </Button>
+
+              <Button
+                variant="romantic-purple"
+                size="xl"
+                onClick={() => handleButtonClick("On Chat 💬")}
+                disabled={selectedButton !== null}
+                className="w-full"
+              >
+                On Chat 💬
+              </Button>
+
+              <Button
+                variant="romantic-gray"
+                size="xl"
+                onClick={() => handleButtonClick("Later ⏳")}
+                disabled={selectedButton !== null}
+                className="w-full"
+              >
+                Later ⏳
+              </Button>
+            </div>
           </div>
 
           {/* Thank You Message */}
           {selectedButton && (
             <div className={`${showMessage ? 'reveal-message' : 'opacity-0'}`}>
+              <div className="mb-4">
+                <p className="text-xl font-medium text-foreground">
+                  You selected: {selectedButton}
+                </p>
+              </div>
+              
               <Card className="max-w-2xl mx-auto p-8 bg-card/80 backdrop-blur-sm border-2 border-primary/20 shadow-[var(--shadow-dreamy)]">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🎁</div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    You said {selectedButton}...
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                    Secret Message Unlocked!
                   </h3>
-                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    and that means the world to me. This is the beginning of something beautiful, Unnati.
-                  </p>
+                  <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-4">
+                    <p>You said yes... and my heart is dancing.</p>
+                    <p>This is the start of something beautiful, Unnati.</p>
+                    <p>You're special, and I'm so lucky to have your smile in my world.</p>
+                  </div>
                   <div className="mt-6 text-xl font-medium text-foreground">
-                    – Yours forever, Stavya 💌
+                    – Yours always, Stavya 💌
                   </div>
                   
                   {/* Celebration Hearts */}
